@@ -137,7 +137,7 @@
 
 //Show Temperature ADC value
 //The M105 command return, besides traditional information, the ADC value read from temperature sensors.
-//#define SHOW_TEMP_ADC_VALUES
+#define SHOW_TEMP_ADC_VALUES
 
 /**
  * High Temperature Thermistor Support
@@ -331,9 +331,9 @@
 // @section homing
 
 //homing hits the endstop, then retracts by this distance, before it tries to slowly bump again:
-#define X_HOME_BUMP_MM 5
-#define Y_HOME_BUMP_MM 5
-#define Z_HOME_BUMP_MM 5 // deltas need the same for all three axis
+#define X_HOME_BUMP_MM 8
+#define Y_HOME_BUMP_MM 8
+#define Z_HOME_BUMP_MM 8 // deltas need the same for all three axis
 #define HOMING_BUMP_DIVISOR {10, 10, 10}  // Re-Bump Speed Divisor (Divides the Homing Feedrate)
 //#define QUICK_HOME  //if this is defined, if both x and y are to be homed, a diagonal move will be performed initially.
 
@@ -487,7 +487,7 @@
 
 // The hardware watchdog should reset the microcontroller disabling all outputs,
 // in case the firmware gets stuck and doesn't do temperature regulation.
-#define USE_WATCHDOG
+//#define USE_WATCHDOG
 
 #if ENABLED(USE_WATCHDOG)
   // If you have a watchdog reboot in an ArduinoMega2560 then the device will hang forever, as a watchdog reset will leave the watchdog on.
